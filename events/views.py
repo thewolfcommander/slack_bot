@@ -12,8 +12,8 @@ class Events(APIView):
         text = request.data.get('text', None)
 
         resp = requests.post('https://slack.com/api/chat.postMessage', {
-            'token': "xoxb-1234958449984-1211347637395-EX8IKUZ9EmewbbYRXIPfLed3",
-            'channel': "#website",
+            'token': "xoxb-1234958449984-1211347637395-mXsjEJVzUSyPyCAjR4yAR4iM",
+            'channel': "#general",
             'text': text,
             'icon_url': "https://mycocosoul.s3.amazonaws.com/static/img/logo.png",
             'username': "easyeats"

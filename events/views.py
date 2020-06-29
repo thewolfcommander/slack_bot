@@ -16,11 +16,11 @@ class Events(APIView):
         SLACK_USER_NAME = request.data.get('username')
 
         resp = requests.post('https://slack.com/api/chat.postMessage', {
-            'token': SLACK_BOT_USER_TOKEN,
-            'channel': SLACK_CHANNEL,
+            'token': json.dumps(SLACK_BOT_USER_TOKEN),
+            'channel': json.dumps(SLACK_CHANNEL),
             'text': text,
-            'icon_url': SLACK_ICON_URL,
-            'username': SLACK_USER_NAME
+            'icon_url': json.dumps(SLACK_ICON_URL),
+            'username': json.dumps(SLACK_USER_NAME)
         }).json()
 
         return Response(resp)

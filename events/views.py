@@ -9,14 +9,9 @@ from rest_framework import status
 
 class Events(APIView):
     def post(self, request, *args, **kwargs):
-        text = request.data.get('text', None)
-
-        resp = requests.post('https://slack.com/api/chat.postMessage', {
-            'token': "xoxb-1234958449984-1211347637395-mXsjEJVzUSyPyCAjR4yAR4iM",
-            'channel': "#general",
-            'text': text,
-            'icon_url': "https://mycocosoul.s3.amazonaws.com/static/img/logo.png",
-            'username': "easyeats"
-        }).json()
-
+        data = request.data.get('data')
+        webhook = request.data.get('webhook')
+        print(type(data))
+        print(type(webhook))
+        resp = requests.post(webhook, json.dumps(data))
         return Response(resp)

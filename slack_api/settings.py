@@ -136,7 +136,3 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 # SLACK API Configurations
 # ----------------------------------------------
 # use your keys 
-SLACK_CLIENT_ID = '1234958449984.1234963021632'
-SLACK_CLIENT_SECRET = '3746147a63e6669a5e376a03a181f6ab'
-SLACK_VERIFICATION_TOKEN = 'D7Zo5aICFgJyiroUSliOZnRE'
-SLACK_BOT_USER_TOKEN = 'xoxb-1234958449984-1211347637395-EX8IKUZ9EmewbbYRXIPfLed3'
